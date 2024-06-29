@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Lexicon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<?php
+    $con = mysqli_connect("localhost", "root", "");
+    if(!$con) {
+     die("Could not connect: " . mysqli_error($con)); // แก้ mysql_error() เป็น mysqli_error()
+    }
+    mysqli_set_charset($con,"utf8");
+    mysqli_select_db($con, "lexicon");
+
+    $w_name = mysqli_real_escape_string($con, $_POST['w_name']);
+    $w_lang = mysqli_real_escape_string($con, $_POST['lang']);
+    $w_type = mysqli_real_escape_string($con, $_POST['type']);
+    $phonetic = mysqli_real_escape_string($con, $_POST['phonetic']);
+    $ipa = mysqli_real_escape_string($con, $_POST['ipa']);
+    $origin = mysqli_real_escape_string($con, $_POST['origin']);
+    $meaning = mysqli_real_escape_string($con, $_POST['meaning']);
+    $example = mysqli_real_escape_string($con, $_POST['example']);
+    $date = date("Y-m-d H:i:s");
+    $audioFileName = mysqli_real_escape_string($con, $_FILES['audio']['name']); // รับชื่อไฟล์เสียง
+    $audioFilePath = 'audio/' . $audioFileName; // ตำแหน่งที่ต้องการบันทึกไฟล์
+
+    if ($_FILES['audio']['error'] > 0)
+	echo "Error:" . $_FILES['audio']['error'] . "<br/>";
+
+    move_uploaded_file($_FILES['audio']['tmp_name'], $audioFilePath);
+    // บันทึกชื่อไฟล์ลงในฐานข้อมูล
+    $sql = "INSERT INTO w_mellas (w_name, w_lang, w_type, phonetic, ipa, audio, origin, meaning, example, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "ssssssssss", $w_name, $w_lang, $w_type, $phonetic, $ipa, $audioFileName, $origin, $meaning, $example, $date);
+    // execute query
+    $check_query = "SELECT * FROM w_mellas WHERE w_name = ?";
+    $check_stmt = mysqli_prepare($con, $check_query);
+    mysqli_stmt_bind_param($check_stmt, "s", $w_name);
+    mysqli_stmt_execute($check_stmt);
+    mysqli_stmt_store_result($check_stmt);
+    $num_rows = mysqli_stmt_num_rows($check_stmt);
+    mysqli_stmt_close($check_stmt);
+    // ถ้าชื่อคำศัพท์ไม่ซ้ำกับข้อมูลที่มีอยู่ในฐานข้อมูล
+    if($num_rows == 0) {
+        // execute query
+        if(mysqli_stmt_execute($stmt)) {
+            echo "<script>alert('Add Word Successful'); window.location='add_new_data_form.php';</script>";
+        } else {
+            echo "Error: " . mysqli_error($con);
+        }
+    } else {
+        // แสดงการแจ้งเตือนเมื่อคำศัพท์ซ้ำกับข้อมูลที่มีอยู่ในฐานข้อมูล
+        echo "<script>alert('Word already exists'); window.location='add_new_data_form.php';</script>";
+    }
+    mysqli_stmt_close($stmt);
+
+    mysqli_close($con);
+?>
+
+
+
+
+// MODALDELETE BUTTON
+      echo "<button id='deletebtn" . $row['w_lang'] . $row['w_id'] . "' class='deletebtn'><i class ='fa fa-trash'></i></button>";
+      echo "     <form name='delWord' method='get' action='dictionary.php'>";
+      echo "        <input type='text' name='table' value='w_" . $row['w_lang'] . "' hidden/>";
+      echo "        <input type='text' name='w_id' value='" . $row['w_id'] . "' hidden/>";
+      echo "        <input type='text' name='w_name' value='" . $row['w_name'] . "' hidden/>";
+      echo "        <input type='text' name='w_lang' value='" . $row['w_lang'] . "' hidden/>";
+      echo "        <input type='text' name='w_type' value='" . $row['w_type'] . "' hidden/>";
+      echo "        <input type='text' name='uniqueid' value='" . $row['w_lang'].$row['w_name'].$row['w_type'] . "' hidden/>";
+      echo "<div id='deleteModal' class='modal'>";
+      echo "  <!-- Modal content -->";
+      echo "  <div class='modal-content'>";
+      echo "    <span class='close'>&times;</span>";
+      echo "      <span class='sureornot'>ARE YOU SURE TO DELETE THESE DATA?". $row['w_lang'].$row['w_name'].$row['w_type'] ."</span>";
+      echo "    <div class='confirm-delete'>";
+      echo "     <button type='submit' class='yes' value='YES, DELETE' onclick='delWord" . $row['w_lang'] . $row['w_id'] . "()'><div class='delete-text'>YES, DELETE</div></button>";
+      echo "     </form>";
+      echo "     <button type='button' class='no' id='no' onclick='delWord" . $row['w_lang'] . $row['w_id'] . "()'><div class='delete-text'>NO, MY MISTAKE</div></button>";
+      echo "    </div>";
+      echo "  </div>";
+      echo "</div>";
+      echo "</div>";
+
+
+
+
+//////////////// WEBSITE SEARCH SYSTEM //////////////////
+- ในช่องค้นหาข้างบน หากค้นหาคำเดียว จะค้นหาหน้าที่มีความใกล้เคียงกับคำค้นหา (เนื่องจากไม่มีภาษาให้เลือกหา)
+- หากค้นหาหลายคำพร้อมกันโดยใช้ , คั่น ระบบจะแสดงเพียงแค่ข้อมูลหลักของคำค้นหา โดยไม่มี Relative Vocab

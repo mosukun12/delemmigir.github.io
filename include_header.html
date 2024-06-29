@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <title>Project Lexicon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" type='text/css' href="style1.css">
+	<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .header-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* ปรับค่า Z-index เพื่อให้แถบ header อยู่ด้านบนของหน้าจอ */
+            height: 7rem;
+            max-width: 100%;
+            display: flex;
+            background-color: rgb(35, 35, 35);
+            border-bottom: 2px solid rgb(69, 69, 69);
+            -webkit-user-select: none; /* Chrome, Safari, Opera */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header-nav">
+        <div class="logo">
+            <a href="index.php">
+                <h1>De Lem<br />Mihgir</h1>
+            </a>
+        </div>
+        <form name='search' action="browse.php" method="get">
+            <table align="left" width="0">
+                <tr>
+                    <td>
+                        <div id="p_1" class="search-container">
+                            <input type="search" class="top-search" id="search" name="search" placeholder="Search" />
+                        </div>                    
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="main-nav-root">
+            <div class="main-nav-text">
+                <ul class="nav-menu">
+                    <li class="nav-list"><a href="explore.php" class="menu">Explore</a></li>
+                    <li class="nav-list"><a href="dictionary.php" class="menu">Dictionary</a></li>
+                    <li class="nav-list"><a id="languages-selection" href="languages.php" class="menu">Languages</a></li>
+                    <li class="nav-list"><a href="translate.php" class="menu">Translate</a></li>
+                    <li class="nav-list"><a href="grammar.php" class="menu">Grammar</a></li>
+                    <li><button type="button" class="btn-add-new" onclick="window.location.href='add_new_data_form.php'"><i class="fa fa-plus" style="font-size:22px"></i> NEW WORD</button></p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

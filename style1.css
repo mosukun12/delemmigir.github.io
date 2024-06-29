@@ -1,0 +1,1373 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Palanquin+Dark:wght@400;500;600;700&family=Protest+Strike&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family:"UKIJ Nasq Zilwa Bold";
+  src:url("UKIJNsqZB.eot?") format("eot"),
+  url("UKIJNsqZB.woff") format("woff"),
+  url("UKIJNsqZB.ttf") format("truetype"),
+  url("UKIJNsqZB.svg#UKIJNasqZilwa-Bold") format("svg");
+  font-weight:normal;
+  font-style:normal;}
+
+@font-face {
+  font-family: Mellas-Regular;
+  src: url(font/Mellas-Regular.otf);
+}
+
+@font-face {
+  font-family: Times Phonetic;
+  src: url(font/Times_Phonetic.otf);
+}
+
+@font-face {
+  font-family: LFTEtica;
+  src: url(font/LFTEtica.ttf);
+}
+
+@font-face {
+  font-family: Blacker Sans Text Bold;
+  src: url(font/BlackerSansTextBold.ttf);
+}
+
+@font-face {
+  font-family: NewtonC Regular;
+  src: url(font/NewtonCRegular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: rgb(34, 34, 34);
+  background-color: #FFC300;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  min-height: 15rem;
+  width: 100%;
+  display: flex; 
+  background-color: rgb(35, 35, 35);
+  border-top: 1px solid rgb(69, 69, 69);
+}
+
+.footer p {
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+  min-height: 10px;
+
+  /* border: 1px solid red; */
+  color: rgb(255, 255, 255);
+}
+
+.bgcolor {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+}
+
+.logo {
+  margin-left: 20px;
+  height: 70px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Protest Strike;
+  font: Protest Strike;
+  text-decoration: none;
+}
+
+
+.logo h1 {
+  color: #FFC300;
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 2px;
+  font-weight: 300;
+}
+
+.logo a:hover {
+  text-decoration: none;
+
+}
+
+.logo2 {
+  margin-top: 70px;
+  height: 10px;
+  width: 100%;
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Protest Strike;
+  font: Protest Strike;
+  text-decoration: none;
+  /* border-right: 1px solid rgb(69, 69, 69); */
+}
+
+.logo2 h1 {
+  color: #FFC300;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 2px;
+  font-weight: 300;
+}
+
+.logo2 a:hover {
+  text-decoration: none;
+}
+
+.main-nav-root {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav-text a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: max-content;
+  margin-top: 10px;
+  font-family: Protest Strike;
+  font-size: 20px;
+  /* border: 1px solid red; */
+  color: white;
+  text-decoration: none;
+  word-spacing: 50px;
+
+}
+
+.main-h-p {
+  font-family: "Palanquin Dark", Kanit;
+    color: white;
+}
+
+.search-container {
+  display: flex;
+  position: relative;
+  width: 450px;
+  /* border: 1px solid red; */
+}
+
+.search-container input[type="search"] {
+  display: flex;
+  padding-left: 40px;
+  /* ปรับระยะห่างของข้อความในช่อง search */
+}
+
+.search-container::before {
+  content: "";
+  background-image: url('images/search.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  filter: invert(50%);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top-search {
+  font-family: "Palanquin Dark", Kanit;
+  font-size: large;
+  color: white;
+  margin: 15px;
+  padding: 50;
+  height: 40px;
+  width: 450px;
+  border: 2px solid #454545;
+  border-color: auto;
+  border-radius: 25px;
+  background: #2c2c2c;
+}
+
+.top-search:hover {
+  cursor: auto;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.container {
+  height: fit-content;
+  /* border: 2px solid #00bbff; */
+}
+
+.site-root {
+  height:  inherit;
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  /* border: 2px solid #00ff04; */
+}
+
+.site-home-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 26vh;
+  /* border: 2px solid #00ff04; */
+}
+
+.site-content {
+  /* margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px; */
+  color: white;
+  font-family: "Palanquin Dark", Kanit;
+  /* border: 2px solid red; */
+}
+
+.site-desc {
+  font-size: 24px;
+  text-align: center;
+  opacity: 70%;
+}
+
+.site-lang-select-list {
+  height: 50px;
+  list-style-type: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  /* border: 1px solid red; */
+}
+
+.site-lang-select-list input[type="radio"] {
+  margin-right: 10px;
+  display: none;
+}
+
+.site-lang-select-list label {
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 300;
+}
+
+.site-lang-select-list label:not([for="osmeneshienSelect"]) {
+  margin-right: 100px;
+}
+
+.site-lang-select-list label:hover {
+  transform: scale(1.7,1.7);
+  transition: all 0.3s;
+  color:#FFC300;
+  font-weight: 400;
+  text-shadow: 0 0 10px #FFC300; 
+}
+
+.site-lang-select-list input[type="radio"]:checked + label {
+  font-weight: 400;
+  color: #FFC300;
+  transform: scale(1.7,1.7);
+  text-shadow: 0 0 10px #FFC300; 
+}
+
+.site-lang-select-list label {
+  position: relative;
+}
+
+.site-lang-select-list label::before,
+.site-lang-select-list label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1.5px;
+  background-color: #FFC300;
+  transition: all 0.3s;
+}
+
+.site-lang-select-list label::before {
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+
+.site-lang-select-list label::after {
+  right: 50%;
+  width: 0%;
+  transform: translateX(50%);
+}
+
+.site-lang-select-list label:hover::before,
+.site-lang-select-list label:hover::after {
+  width: 100%;
+  box-shadow: 0 0 10px #FFC300;
+}
+
+/* .site-lang-select-list input[type="radio"]:checked + label::before,
+.site-lang-select-list input[type="radio"]:checked + label:after {
+  width: 100%;
+} */
+
+.site-search-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid #00ff04; */
+}
+
+.site-search-container::before {
+  content: "";
+  background-image: url('images/search.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  filter: invert(50%);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 70vh;
+  top: 60.7%;
+  transform: translateY(-50%);
+}
+
+.site-searchbar {
+  width: 80vh;
+  height: 50px;
+  padding: 10px;
+  padding-left: 45px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  border: 2px solid #454545;
+  border-radius: 25px;
+  background-color: #111111;
+}
+
+div[name="list"] {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  /* border: 2px solid #00ff04; */
+}
+
+/* .form-box-root {
+  float: left;
+  width: 1000px;
+  margin: 20px;
+  margin-left: 70px;
+  margin-right: 20px;
+  border-radius: 25px;
+  border: 2px solid #454545;
+} */
+
+.form-box-root[name="list"] {
+  float: left;
+  width: 350px;
+  margin: 20px;
+  margin-left: 10px;
+  margin-right: 50px;
+  border-radius: 25px;
+  border: 2px solid rgb(69, 69, 69);
+}
+
+/* .form-box-container {
+  border-radius: 25px;
+  border: 2px solid #ff0000;
+} */
+
+/* .form-box-text {
+  margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px;
+  float: left;
+  border: 1px solid red;
+} */
+
+.form-box-text[name="list"] {
+  font-size: 20px;
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 30px;
+  float: left;
+  width: 31rem;
+  color:white;
+  padding-bottom: 20px;
+  /* border: 1px solid red;   */
+}
+
+.form-box-text[name="right"] {
+  margin-top: 80px;
+  float: left;
+  /* border: 1px solid red; */
+}
+
+.Origin {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  /* margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 56rem;
+  color:white;
+  border: 2px solid #474747;  
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.Origin-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  margin: 20px;
+  width: inherit;
+  float: left;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.Origin-text h3{
+  height: 40px;
+  width: 45em;
+  margin-top:-19px !important;
+  margin-left: -40px !important;
+  margin-right: -20px !important;
+  text-align: center;
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.LatestAdd {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  /* margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 56rem;
+  color:white;
+  border: 2px solid #474747;  
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+
+.LatestAdd-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  margin: 20px;
+  width: inherit;
+  float: left;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.LatestAdd-text h3{
+  height: 40px;
+  margin-top:-10px !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  text-align: center;
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.RightLatestAdd {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  /* margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  width: 56rem;
+  color:white;
+  border: 2px solid #474747;  
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+
+.RightLatestAdd-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  margin: 20px;
+  width: inherit;
+  float: left;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.RightLatestAdd-text h3{
+  height: 40px;
+  margin-top:-10px !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  text-align: center;
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.RelatedVocab {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  /* margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 56rem;
+  color:white;
+  border: 2px solid #474747;  
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+
+.RelatedVocab-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  margin: 20px;
+  width: inherit;
+  float: left;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.RelatedVocab-text h3{
+  height: 40px;
+  margin-top:-10px !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  text-align: center;
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.RandomWord {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  /* margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 56rem;
+  color:white;
+  border: 8px solid #FFC300;  
+  background-color: #1e1e1e;
+  /* border-radius: 12px; */
+  margin-bottom: 20px;
+}
+
+
+.RandomWord-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 20px;
+  width: inherit;
+  float: left;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.RandomWord-text h3{
+  height: 40px;
+  margin-top:-10px !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+.RandomWord-header a{
+  font-family: arial, Kanit;
+  text-align: left;
+  padding: 10px;
+  font-size: 70px;
+  font-weight: 700;
+  color:#FFC300;
+  /* border: 1px solid red; */
+  margin-top: -10px;
+}
+
+.RandomWord-header a:hover{
+  color:#ffd859;
+  text-decoration: none;
+  /* text-shadow: 0 0 20px #000000; */
+  transition: all .3s;
+}
+
+.index-RandomWord {
+  font-family: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  width: 56rem;
+  color: white;
+  border: 8px solid #FFC300;  
+  background-color: #1e1e1e;
+  margin: 0 auto 20px auto; /* auto ทั้งซ้ายและขวา เพื่อจัดตรงกลาง */
+}
+
+
+.index-RandomWord-text {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 20px;
+  width: inherit;
+  float: center;
+  color:white;
+  /* border: 1px solid red;   */
+}
+
+.index-RandomWord-text h3{
+  height: 40px;
+  margin-top:-10px !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+.index-RandomWord-header a{
+  font-family: arial, Kanit;
+  text-align: left;
+  padding: 10px;
+  font-size: 70px;
+  font-weight: 700;
+  color:#FFC300;
+  /* border: 1px solid red; */
+  margin-top: -10px;
+}
+
+.index-RandomWord-header a:hover{
+  color:#ffd859;
+  text-decoration: none;
+  /* text-shadow: 0 0 20px #000000; */
+  transition: all .3s;
+}
+
+.box-next {
+  margin-top: 10px !important;
+  /* float: left; */
+}
+
+input[type="text"] {
+  background-color: #474747;
+  color: #ffffff;
+  font-size: 20px;
+  width: 390px;
+}
+
+input[type="text"]:hover {
+  background-color: #5a5a5a;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  cursor: auto !important;
+  outline: none;
+} 
+
+input[name="tag"] {
+  width: 390px;
+  background-color: #474747;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.vocab-li {
+  color: red !important;
+}
+
+/* สไตล์ของปุ่มที่สร้างขึ้นเอง */
+.upload-file-box {
+  display: inline-block;
+  width: 390px;
+  height: 40px;
+  background-color: #474747;
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  border-radius: 25px;
+  border: none;
+}
+
+input::file-selector-button {
+  display: inline-block;
+  align-items: right;
+  background-color: #FFC300;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin-right: 15px;
+  font-family: "Palanquin Dark", Kanit;
+  border-radius: 25px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+}  
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #cc9d00;
+}
+
+input[name="phonetic"] {
+  font-family: 'Charis SIL' !important;
+  width: 390px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding: 20px;
+}
+
+input[name="ipa"] {
+  font-family: 'Charis SIL' !important;
+  width: 390px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding: 20px;
+}
+
+textarea[name="mn1"],
+textarea[name="ex1"],
+textarea[name="mn2"],
+textarea[name="ex2"],
+textarea[name="mn3"],
+textarea[name="ex3"],
+textarea[name="mn4"],
+textarea[name="ex4"],
+textarea[name="mn5"],
+textarea[name="ex5"],
+textarea[name="mn6"],
+textarea[name="ex6"] {
+  background-color: #474747;
+  color: #ffffff;
+  font-size: 20px;
+  height: auto;
+  margin-bottom: -5px;
+}
+
+textarea[name="mn1"]:hover,
+textarea[name="ex1"]:hover,
+textarea[name="mn2"]:hover,
+textarea[name="ex2"]:hover,
+textarea[name="mn3"]:hover,
+textarea[name="ex3"]:hover,
+textarea[name="mn4"]:hover,
+textarea[name="ex4"]:hover,
+textarea[name="mn5"]:hover,
+textarea[name="ex5"]:hover,
+textarea[name="mn6"]:hover,
+textarea[name="ex6"]:hover {
+  background-color: #5a5a5a;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.input-box {
+  position: relative;
+  font-family: "Palanquin Dark", Kanit;
+  width: 424px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding: 20px;
+}
+
+.input-box-margin-bottom {
+  position: relative;
+  font-family: 'Charis SIL' !important;
+  width: 424px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.input-box:not(:placeholder-shown) {
+  font-family: "Palanquin Dark", Kanit;
+  font-weight: 600;
+}
+
+.input-comment-box {
+  font-family: "Palanquin Dark", Kanit;
+  width: 424px;
+  height: 249.5px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.input-comment-box:not(:placeholder-shown) {
+  font-family: "Palanquin Dark", Kanit;
+  font-weight: 600;
+}
+
+
+.submit-box[name="submit-top"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 485px;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #5dbea3;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+  border: none;
+  color: black;
+}
+
+.submit-box[name="submit-top"]:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 485px;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: #4c9c85;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+  border: none;
+}
+
+button[name="btn-reset"] {
+  position: absolute;
+  align-items: center;
+  justify-content: right;
+  margin-top: -50px;
+  margin-left: 706px;
+  width: 200px;
+  height: 40px;
+  background-color: #d26666;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  color: black;
+}
+
+button[name="btn-reset"]:hover {
+  position: absolute;
+  align-items: center;
+  justify-content: right;
+  margin-top: -50px;
+  margin-left: 706px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-color: #a94d4d;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+}
+
+.reset {
+  position: absolute;
+  align-items: center;
+  justify-content: right;
+  margin-top: -50px;
+  margin-left: 53%;
+  width: 150px;
+  height: 40px;
+  font-family: Kanit;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  /* border: 1px solid red; */
+  list-style: none;
+  left: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-menu li {
+  margin: 0 2rem;
+  display: grid;
+  place-content: center;
+}
+
+.nav-menu li a {
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  text-decoration: none;
+  color: #FFC300;
+  transition: color 0.3s;
+}
+
+.btn-add-new-text {
+  text-align: center;
+  font-family: Protest Strike;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-add-new {
+  text-align: center;
+  font-family: Protest Strike;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  background-color: #FFC300;
+  color: black;
+  margin-top: 20px;
+  padding-top: 5px;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.btn-add-new:hover {
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 0 20px #FFC300;
+  transition: background-color 0.3s;
+}
+
+.color-white {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif, kanit;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.color-white h3{
+  color: white;
+  font-family: Protest Strike;
+  font-size: 26px;
+  line-height: 1.7;
+  font-weight: 100 !important;
+}
+
+.color-white h4{
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: rgb(191, 191, 191);
+  font-family: "Palanquin Dark";
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 100 !important;
+}
+
+.color-white span a:hover {
+  color: #a98200; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.explorelink {
+  color: #FFC300; 
+  text-decoration: none;
+}
+
+.explorelink:hover {
+  color: #a98200; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+
+.browselink {
+  color: #FFC300;; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.browselink:hover {
+  color: #a98200; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.browseunderlink {
+  color: #6e6e6e;; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.browseunderlink:hover {
+  color: #a0a0a0; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  background-color: #FFC300;
+  border-radius: 5px;
+  border: none;
+}
+
+.back-button:hover {
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  background-color: #cc9d00;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Apply styles to the select element */
+select[name="lang"],
+[name="type"] {
+  width: 200px;
+  height: 40px;
+  font-family: "Palanquin Dark", Kanit;
+  font-size: 18px;
+  margin-left: -7px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #474747;
+  color: #ffffff;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+} 
+
+select[name="lang"]:hover,
+[name="type"]:hover {
+  background-color: #5a5a5a;
+}
+
+select[name="type"] {
+  margin-left: 20px;/
+}
+
+select option {
+  /* Customize option appearance */
+  font-family: Work Sans;
+  background-color: #474747;
+  color: #ffffff;
+}
+
+select option[name="selectlang"],
+[name="selecttype"] {
+  font-family: Work Sans;
+  background-color: #474747;
+  color: #ffffff;
+  text-align: left;
+}
+
+label[for=lang] {
+  font-family: Protest Strike;
+  font: Protest Strike;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: white;
+  font-weight: 50;
+  margin-top: 20px;
+}
+
+.reflang {
+  font-size: x-large;
+}
+
+input[type="text"][name="w_letter"] {
+  font-family: Mellas-Regular;
+  font-size: 25px;
+}
+
+.selectize-control.input-box-tag.multi.plugin-remove_button {
+  width: 390px;
+  height: 100%;
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+}
+
+.selectize-input.items.not-full.focus.input-active.dropdown-active {
+  background-color: #474747;
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  width: 390px;
+  height: 40px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+}
+
+.selectize-input.items.not-full.has-options.has-items {
+  background-color: #474747;
+  color: #ffffff;
+  border-radius: 25px;
+  border: none;
+  height: 100%;
+  padding-top: 0px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.selectize-input.items.not-full.has-options.has-items .item {
+  background-color: #474747;
+  color: #000000;
+  top: 10px;
+  border-radius: 25px;
+  background-color: none;
+}
+
+.selectize-input.items.not-full.has-options.has-items.input-active {
+  background-color: #474747;
+  color: #ffffff;
+  padding-top: 0px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.selectize-input {
+  background-color: #474747;
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  width: 390px;
+  height: 40px;
+  /* ขนาดของกล่องหลัก */
+  border-radius: 25px;
+  border: none;
+  padding: 20px;
+}
+
+.selectize-control.plugin-remove_button .item .remove {
+  color: inherit;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 2px 6px;
+  border-left: 1px solid #ae7503;
+  border-radius: 0 2px 2px 0;
+  box-sizing: border-box;
+  margin-left: 6px
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+  border: 1px solid #ae7503;
+  text-shadow: 0 1px 0 rgba(0, 51, 83, .3);
+  border-radius: 3px;
+  background-color: #FFC300;
+  background-image: linear-gradient(to bottom, #FFC300, #FFC300) !important;
+  background-repeat: repeat-x;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .2), inset 0 1px rgba(255, 255, 255, .03)
+}
+
+input[type="select-multiple"] {
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  width: 390px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.selectize-dropdown-content {
+  background-color: #474747;
+  color: #ffffff;
+}
+
+.create {
+  background-color: #474747;
+  color: #ffffff;
+}
+
+.create-active {
+  background-color: #474747;
+  color: #ffffff;
+}
+
+.selectize-dropdown.multi.input-box-tag.plugin-remove_button {
+  background-color: #474747;
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  width: 390px;
+  height: 40px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
+}
+
+.selectize-dropdown-content {
+  background-color: #474747;
+  color: #ffffff;
+  font-family: "Palanquin Dark", Kanit;
+  width: 390px;
+  height: 40px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
+  margin-right: 5px;
+}
+
+.clear {
+  background-color: #474747;
+  color: #ffffff;
+  left: 440px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  padding: 2px;
+  margin-left: 35px;
+}
+
+.clearicon {
+  filter: invert(1);
+  border-radius: 25px;
+  border: none;
+  width: 60%;
+  height: 60%;
+  content: "";
+}
+
+.addinput {
+  filter: invert(1);
+  width: 20px;
+  height: 20px; 
+}
+
+.addinputbtn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.delete-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px; 
+}
+
+/* .dropdown-menu {
+  display: none;
+  position: absolute;
+  margin-left: 500px;
+  right: 100px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-parent:hover .dropdown-menu {
+  display: block;
+} */

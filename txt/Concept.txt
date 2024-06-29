@@ -1,0 +1,115 @@
+
+
+Header Navgation
+- Logo
+- HOME
+- Search 
+    - filter
+- Languages
+- Add button
+
+INDEX
+1.เป็นหน้าหลักที่จะแสดงแถบค้นหาอยู่ตรงกลางหน้า ใช้สำหรับค้นหาข้อมูลเมื่อเข้าสู่เว็บ
+
+HOME
+- มี Explore เนื้อหา
+- คำศัพท์ประจำวัน
+- ปุ่มนำทางไปหน้าย่อย
+
+== ระบบ ID ของข้อมูล ==
+- รันไอดีอัตโนมัติ โดยจะประกอบไปด้วย
+	- อักษรย่อของชื่อภาษา
+	- ตัวอักษรแยกสุดของคำศัพท์
+	- ตัวเลขท้ายสองตัวของปี/เดือน/วัน
+	- ลำดับของคำที่ถูกเพิ่ม
+	เช่น MLS-A-240101-00
+
+
+== DATABASE ==
+= DB lexicon =
+    - word
+		- w_id
+		- w_name
+		- w_lang
+		- w_type
+		- phonetic
+		- ipa
+		- audio
+		- origin
+		- tag
+		- meaning
+		- example
+    
+</script>
+
+Noun
+Verb
+Adjective
+Adverb
+Pronoun
+Preposition
+Conjunction
+Determiner
+
+ระบบ Edit/Update/Delete DATABASE
+  - มีเมนู Add, Edit, Delete สำหรับ Section รวมของ Vocab 1 คำ
+  - มี Add, Edit, Delete ย่อย สำหรับ Section รองของแต่ละ part of speech 
+    เช่น Aldia มี PS คือ Noun และ Verb ก็จะมีเมนูทั้งในส่วนของ Noun และ Verb ให้ได้กด
+  - เรื่องของโค้ด ให้มีการเก็บข้อมูลในตัวแปล w_redt ของแต่ละคำศัพท์/ความหมายที่ต้องการ แล้วค่อยส่งไปหน้า edit ข้อมูลอีกที
+  - ระบบ Add หรือเพิ่มความหมายของแต่ละ Section ในแต่ละ PS เมื่อกดเข้าไปจะเป็น Modal แสดงขึ้น
+    - มี select ให้เลือก part of speech
+    - มี ให้ใส่ mn และ ex มากสุดแค่ 6
+
+
+
+
+
+    <!-- <div class="content-list-word-root">
+      <div class="lang-top">Mellas</div>
+      <div class="content-list-word-container">
+          <section class="content-list-word content-top" id="mywords">
+            <div class="content-word-item" id="word1">
+              <p class="wordname" id="wordName1">Mellas</p>
+              <p class="wordphonetic" id="wordPhonetic1">[mel-las]</p>
+              <p class="wordipa hide" id="wordIPA1">[mɛl'ləs]</p>
+              <button class="changeWordIPA" onclick="changeWordIPA()">
+                <div class="showIPA">SHOW IPA</div>
+              </button> 
+              <audio id="pronounce1" class="display: none; visibility:hidden; hide">
+                <source src="audio/among-us-role-reveal-sound.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+              <button class="audio-btn" onclick="playAudio()"><img src="images/Speaker_Icon.png"></button>
+              <p class="wordLangLetter" id="wordLanguage1">(mel'as)</p>
+              <div class="buttonsetting">
+                <button class="editbtn" onclick="openEditWord('word1')"><i class="fa fa-pencil"></i></button>
+                <button class="deletebtn" onclick="delWord('word1')"><i class ="fa fa-trash"></i></button>
+              </div>
+            </div>
+          </section>
+              <hr>
+              <div class="word-type">
+                <b>(noun)<br/></b>
+              </div>
+              <ol class="meaning-list">
+                <li class="meaning-list-content">group of people of Mellas ethnicity.</li><br>
+                <li class="meaning-list-content">a creature like a human who was born in northern-central of Aldia continent.</li><br>
+              </ol>
+              <div class="example-sentence">
+                <p>Est Mellas walem.<br>
+              </div>
+              <div class="recentAndCreated">
+                <p>Last edited: 13/03/2024, 22:36</p>
+                <p>Create date: 29/02/2024, 16:45</p>
+              </div>
+              <hr>
+              <div class="category-list">
+                <div class="cat-title">CATEGORY:</div>
+                <ul class="category-list-content">
+                  <li class="cate-box">human</li>
+                  <li class="cate-box">ethnicity</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div> -->

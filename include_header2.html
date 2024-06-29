@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <title>Project Lexicon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" type='text/css' href="style1.css">
+	<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  background-color: rgb(35, 35, 35);
+  border-bottom: 1px solid rgb(69, 69, 69);
+}
+
+    </style>
+</head>
+
+<body onload="defaultElements()" id="grad1">
+    <section class="header">
+        <div class="logo">
+            <a href="index.php">
+                <h1>De Lem<br />Mihgir</h1>
+            </a>
+        </div>
+        <form name='search' action="" method="get">
+            <table align="left" width="0">
+                <tr>
+                    <td>
+                        <p id="p_1" class="search-container">
+                            <input type="search" class="top-search" id="searching" name="searching" placeholder="Search..." />
+                        </p>                    
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="main-nav-root">
+            <div class="main-nav-text">
+                <ul class="nav-menu">
+                    <li class="nav-list"><a href="explore.php" class="menu">Explore</a></li>
+                    <li class="nav-list"><a href="dictionary.php" class="menu">Dictionary</a></li>
+                    <li class="nav-list"><a href="languages.php" class="menu">Languages</a></li>
+                    <li class="nav-list"><a href="translate.php" class="menu">Translate</a></li>
+                    <li class="nav-list"><a href="grammar.php" class="menu">Grammar</a></li>
+                </ul>
+            </div>
+            <ul>
+                <li><p align="center" id="p_2" class="btn-add-new-text"><button type="button" class="btn-add-new" onclick="window.location.href='add_new_data_form.php'">Add new data</button></p></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
